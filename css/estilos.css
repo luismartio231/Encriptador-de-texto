@@ -1,0 +1,399 @@
+/*------------Fuentes-------------*/
+/* Importación de la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/*-----------Variables CSS------------*/
+/* Variables globales CSS definidas en :root para mantener consistencia en colores y estilos */
+:root {
+    --Font: #E5E5E5; /* Color base para el fondo del sitio */
+    --White: #FFFFFF; /* Color blanco puro */
+    --Dark-Blue: #0A3871; /* Azul oscuro usado en textos y botones */
+    --Greey: #C5C5C5; /* Gris claro usado en bordes */
+    --Medium-Gray: #67808E; /* Gris medio para textos y otros elementos */
+    --RGBA: rgba(0, 0, 0, 0.08); /* Sombra sutil */
+    --White-Blue: #D8DFE8; /* Azul claro usado en botones */
+    --Medium-Blue: #0a38718a; /* Azul medio translúcido usado en efectos */
+    --Gray: #343A40; /* Gris oscuro para textos */
+    --Gree: #495057; /* Verde grisáceo para textos */
+}
+
+/*-----------Reset y estilos básicos-----------*/
+/* Aplicación de estilos básicos y reseteo de márgenes, padding y box-sizing */
+* {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el padding predeterminado */
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total del elemento */
+    font-family: 'Inter', sans-serif; /* Establece la fuente global para el sitio */
+    text-decoration: none; /* Elimina las decoraciones de texto */
+}
+
+/* Estilo de selección de texto */
+::selection {
+    background: var(--Dark-Blue); /* Cambia el fondo al seleccionar texto */
+    color: var(--White); /* Cambia el color del texto seleccionado */
+}
+
+/* Estilo global para el body */
+body {
+    height: 100%; /* Ocupa el 100% de la altura de la ventana */
+    
+}
+
+/* Estilo global para las imágenes */
+img {
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho de su contenedor */
+}
+
+/*-----------------Encabezado------------------*/
+/* Estilo para el encabezado */
+header {
+    position: absolute; /* Posiciona el encabezado de manera absoluta */
+    margin: 40px 0px 0px 40px; /* Márgenes alrededor del encabezado */
+}
+
+/* Estilo para el logo dentro del encabezado */
+header .logo {
+    display: flex; /* Uso de flexbox para alineación */
+    align-items: flex-start; /* Alinea el logo al principio del contenedor */
+    width: 120px; /* Ancho del logo */
+    height: 48px; /* Altura del logo */
+}
+
+/*---------------Principal----------------*/
+/* Estilo principal para la etiqueta <main> */
+main {
+    margin-top: -20px; 
+    display: flex; /* Disposición en flexbox para los elementos hijos */
+    flex-direction: row; /* Los elementos hijos se organizan en fila */  
+    background-size: cover; /* La imagen cubre el área de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Sección del encriptador */
+.encriptador {
+    width: 60%; /* Ocupa el 60% del ancho disponible */
+    margin: 168px 0px 0px 140px; /* Márgenes para posicionar la sección */
+    background: transparent; /* Fondo transparente para esta sección */
+}
+
+/* Estilo del área de texto para encriptar */
+.encriptar {
+    width: 660px; /* Ancho del área de texto */
+    height: 288px; /* Altura del área de texto */
+    font-weight: 400; /* Grosor normal del texto */
+    font-size: 32px; /* Tamaño grande para el texto */
+    line-height: 48px; /* Espaciado entre líneas */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+    border: 1px solid var(--Greey); /* Borde gris claro */
+    border-radius: 15px; /* Bordes redondeados */
+    resize: none; /* Desactiva el redimensionamiento */
+    padding: 1%;
+}
+
+/* Estilo para el placeholder y enfoque del campo de texto */
+.encriptar::placeholder,
+:focus {
+    color: var(--Dark-Blue); /* Color azul oscuro para el placeholder y el texto cuando está en foco */
+}
+
+/* Sección de aviso en el encriptador */
+.encriptador-aviso {
+    display: flex; /* Flexbox para disposición en fila */
+    flex-direction: row; /* Elementos dispuestos en fila */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    padding: 0; /* Sin padding adicional */
+    gap: 8px; /* Espaciado entre elementos */
+    position: absolute; /* Posiciona el aviso de manera absoluta */
+    top: 500px; /* Desplazamiento desde la parte superior */
+}
+
+/* Estilo para el texto del aviso */
+.texto-aviso {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    font-style: normal; /* Estilo normal para el texto */
+    font-weight: 400; /* Grosor normal del texto */
+    font-size: 18px; /* Tamaño de fuente mediano */
+    line-height: 150%; /* Espaciado entre líneas */
+    opacity: 0.8; /* Ligera transparencia */
+    color: var(--Medium-Gray); /* Color gris medio */
+}
+
+/* Contenedor principal para el encriptador */
+.encriptador-contenedor {
+    display: flex; /* Define un contenedor flexbox para permitir alineación flexible de elementos secundarios */
+    flex-direction: row; /* Configura la dirección de los elementos secundarios en una fila horizontal */
+    align-items: flex-start; /* Alinea los elementos secundarios al inicio del contenedor, verticalmente */
+    gap: 8px; /* Añade un espacio de 8px entre cada elemento secundario dentro del contenedor */
+    position: absolute; /* Establece la posición del contenedor como absoluta en relación con su contenedor padre más cercano posicionado */
+    top: 526px; /* Establece la posición vertical del contenedor a 526px desde la parte superior del contenedor padre */
+}
+
+/* Botón de encriptar */
+.btn-encriptar {
+    width: 328px; /* Define un ancho fijo de 328px para el botón */
+    height: 67px; /* Define una altura fija de 67px para el botón */
+    padding: 24px; /* Añade un relleno de 24px alrededor del contenido del botón */
+    font-style: normal; /* Establece el estilo de fuente como normal (sin cursiva) */
+    font-weight: 400; /* Define el grosor de la fuente en un valor regular de 400 */
+    font-size: 16px; /* Define el tamaño de la fuente en 16px */
+    line-height: 19px; /* Define la altura de la línea en 19px para controlar el espacio entre líneas de texto */
+    text-align: center; /* Centra el texto horizontalmente dentro del botón */
+    color: var(--White); /* Establece el color del texto utilizando la variable CSS --White */
+    background: var(--Dark-Blue); /* Establece el color de fondo del botón utilizando la variable CSS --Dark-Blue */
+    border: 1px solid var(--Dark-Blue); /* Define un borde de 1px sólido utilizando el color de la variable CSS --Dark-Blue */
+    border-radius: 24px; /* Aplica un radio de borde de 24px para hacer esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón, indicando que es interactivo */
+    box-shadow: 0px 20px 29px -5px var(--RGBA); /* Añade una sombra al botón utilizando una variable de color RGBA */
+}
+
+/* Estilo para el estado activo (presionado) del botón de encriptar */
+.btn-encriptar:active {
+    box-shadow: inset 2px 2px 4px var(--Font), /* Aplica sombras internas al botón al hacer clic */
+                inset -3px -4px 8px var(--Dark-Blue); /* Segunda sombra interna de diferente dirección y color */
+    color: var(--White-Blue); /* Cambia el color del texto a White-Blue cuando el botón está activo */
+}
+
+/* Botón de desencriptar */
+.btn-desencriptar {
+    width: 328px; /* Define un ancho fijo de 328px para el botón */
+    height: 67px; /* Define una altura fija de 67px para el botón */
+    padding: 24px; /* Añade un relleno de 24px alrededor del contenido del botón */
+    font-style: normal; /* Establece el estilo de fuente como normal (sin cursiva) */
+    font-weight: 400; /* Define el grosor de la fuente en un valor regular de 400 */
+    font-size: 16px; /* Define el tamaño de la fuente en 16px */
+    line-height: 19px; /* Define la altura de la línea en 19px para controlar el espacio entre líneas de texto */
+    text-align: center; /* Centra el texto horizontalmente dentro del botón */
+    color: var(--Dark-Blue); /* Establece el color del texto utilizando la variable CSS --Dark-Blue */
+    background: var(--White-Blue); /* Establece el color de fondo del botón utilizando la variable CSS --White-Blue */
+    border: 1px solid var(--Dark-Blue); /* Define un borde de 1px sólido utilizando el color de la variable CSS --Dark-Blue */
+    border-radius: 24px; /* Aplica un radio de borde de 24px para hacer esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón, indicando que es interactivo */
+    box-shadow: 0px 20px 29px -5px var(--RGBA); /* Añade una sombra al botón utilizando una variable de color RGBA */
+}
+
+/* Estilos para el estado activo de los botones de copiar y desencriptar */
+.btn-copiar:active,
+.btn-desencriptar:active {
+    box-shadow: inset 2px 2px 4px var(--Dark-Blue), /* Aplica sombras internas al botón al hacer clic */
+                inset -3px -4px 8px var(--Font); /* Segunda sombra interna de diferente dirección y color */
+    color: var(--Medium-Blue); /* Cambia el color del texto a Medium-Blue cuando el botón está activo */
+}
+
+/* Tarjeta de diseño */
+.tarjeta {
+    width: 270px; /* Define un ancho fijo de 270px para la tarjeta */
+    height: 580px; /* Define una altura fija de 580px para la tarjeta */
+    background: var(--Font); /* Establece el color de fondo de la tarjeta utilizando la variable CSS --Font */
+    box-shadow: 10px 24px 32px -8px var(--Gray); /* Añade una sombra alrededor de la tarjeta */
+    position: relative; /* Establece la posición como relativa para permitir posicionamiento de elementos secundarios */
+    margin-top: 40px; /* Añade un margen superior de 40px */
+    border-radius: 32px; /* Aplica un radio de borde de 32px para hacer esquinas redondeadas */
+    text-align: center; /* Centra el texto horizontalmente dentro de la tarjeta */
+}
+
+/* Contenedor dentro de la tarjeta */
+.tarjeta-contenedor {
+    width: 250px; /* Define un ancho fijo de 250px para el contenedor dentro de la tarjeta */
+    margin: auto; /* Centra el contenedor horizontalmente dentro de la tarjeta */
+    margin-top: 50%; /* Añade un margen superior del 50% de la altura del contenedor */
+    background: var(--Font); /* Establece el color de fondo utilizando la variable CSS --Font */
+}
+
+/* Imagen del muñeco dentro de la tarjeta */
+.img-muñeco {
+    background: var(--Font); /* Establece el color de fondo de la imagen del muñeco utilizando la variable CSS --Font */
+}
+
+/* Estilos para el primer texto */
+.texto-uno {
+    font-style: normal; /* Establece el estilo de fuente como normal (sin cursiva) */
+    font-weight: 700; /* Define el grosor de la fuente como negrita (700) */
+    font-size: 18px; /* Define el tamaño de la fuente en 18px */
+    line-height: 120%; /* Establece la altura de la línea al 120% del tamaño de fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: var(--Gray); /* Establece el color del texto utilizando la variable CSS --Gray */
+    background: var(--Font); /* Establece el color de fondo utilizando la variable CSS --Font */
+}
+
+/* Estilos para el segundo texto */
+.texto-dos {
+    font-style: normal; /* Establece el estilo de fuente como normal (sin cursiva) */
+    font-weight: 400; /* Define el grosor de la fuente en un valor regular de 400 */
+    font-size: 12px; /* Define el tamaño de la fuente en 12px */
+    line-height: 150%; /* Establece la altura de la línea al 150% del tamaño de fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: var(--Medium-Gray); /* Establece el color del texto utilizando la variable CSS --Medium-Gray */
+    background: var(--Font); /* Establece el color de fondo utilizando la variable CSS --Font */
+}
+
+/* Campo de texto para evaluación */
+.evaluar {
+    width: 100%; /* Establece el ancho al 100% del contenedor padre */
+    height: 485px; /* Define una altura fija de 485px */
+    position: absolute; /* Posiciona el elemento de forma absoluta dentro de su contenedor padre */
+    padding: 20px; /* Añade un relleno de 20px alrededor del contenido */
+    top: 0; /* Establece la posición superior a 0 */
+    left: 0; /* Establece la posición izquierda a 0 */
+    font-weight: 400; /* Define el grosor de la fuente en un valor regular de 400 */
+    font-size: 24px; /* Define el tamaño de la fuente en 24px */
+    line-height: 36px; /* Establece la altura de la línea en 36px */
+    color: var(--Gree); /* Establece el color del texto utilizando la variable CSS --Gree */
+    background: transparent; /* Establece el fondo como transparente */
+    border-top-right-radius: 32px; /* Aplica un radio de borde superior derecho de 32px */
+    border-top-left-radius: 32px; /* Aplica un radio de borde superior izquierdo de 32px */
+    border: none; /* Elimina cualquier borde existente */
+    resize: none; /* Impide que el campo de texto sea redimensionable */
+}
+
+/* Estilo para el enfoque del campo de texto de evaluación */
+.evaluar:focus {
+    outline: none; /* Elimina el contorno que aparece al enfocar el campo */
+}
+
+/* Botón de copiar */
+.btn-copiar {
+    width: 224px; /* Define un ancho fijo de 224px para el botón */
+    height: 67px; /* Define una altura fija de 67px para el botón */
+    margin: 23px; /* Añade un margen de 23px alrededor del botón */
+    position: absolute; /* Posiciona el botón de forma absoluta dentro de su contenedor padre */
+    bottom: 0; /* Establece la posición inferior a 0 */
+    left: 0; /* Establece la posición izquierda a 0 */
+    visibility: hidden; /* Oculta el botón por defecto */
+    padding: 24px; /* Añade un relleno de 24px alrededor del contenido del botón */
+    font-size: 16px; /* Define el tamaño de la fuente en 16px */
+    line-height: 19px; /* Define la altura de la línea en 19px para controlar el espacio entre líneas de texto */
+    text-align: center; /* Centra el texto horizontalmente dentro del botón */
+    background: var(--White-Blue); /* Establece el color de fondo del botón utilizando la variable CSS --White-Blue */
+    border: 1px solid var(--Dark-Blue); /* Define un borde de 1px sólido utilizando el color de la variable CSS --Dark-Blue */
+    border-radius: 20px; /* Aplica un radio de borde de 20px para hacer esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón, indicando que es interactivo */
+}
+
+
+/* Efecto hover para botones de encriptar, desencriptar y copiar */
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover {
+    transform: scale(0.97); /* Reduce ligeramente el tamaño del botón al pasar el ratón sobre él para un efecto visual de clic */
+}
+
+/*------------------Pie De Página------------------*/
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 15px; /* Añade un margen superior de 15px */
+    padding: 10px; /* Añade un relleno de 10px alrededor del contenido */
+    border-top: 2px solid var(--Font); /* Agrega un borde superior de 2px sólido utilizando la variable CSS --Font */
+    color: var(--Gray); /* Establece el color del texto utilizando la variable CSS --Gray */
+    text-align: center; /* Centra el texto horizontalmente dentro del pie de página */
+    height: 5px; /* Define una altura fija de 5px para el pie de página */
+    font-size: 20px; /* Establece el tamaño de la fuente en 20px */
+    font-weight: 700; /* Define el grosor de la fuente como negrita (700) */
+    color: var(--Gray); /* Establece el color del texto utilizando la variable CSS --Gray (repetido para asegurar el estilo) */
+}
+
+/* Estilo hover para enlaces con la clase 'linked' */
+.linked:hover {
+    color: var(--Font); /* Cambia el color del texto utilizando la variable CSS --Font al pasar el ratón */
+    opacity: 0.8; /* Ajusta la opacidad al 80% para un efecto visual */
+}
+
+/* Estilo hover para enlaces con la clase 'git' */
+.git:hover {
+    color: var(--Font); /* Cambia el color del texto utilizando la variable CSS --Font al pasar el ratón */
+    opacity: 0.6; /* Ajusta la opacidad al 60% para un efecto visual */
+}
+
+/*---------------Media Queries----------------*/
+
+/* Media query para pantallas con un ancho máximo de 1250px */
+@media(max-width: 1250px) {
+    main {
+        display: flex; /* Cambia el contenedor principal a un flexbox para alineación flexible */
+        flex-direction: column; /* Organiza los elementos secundarios en una columna vertical */
+        align-items: center; /* Centra los elementos secundarios horizontalmente */
+        width: 100%; /* Define el ancho al 100% del contenedor padre */
+    }
+
+    .encriptador {
+        margin: 168px 0px 0px 0px; /* Añade un margen superior de 168px */
+        display: flex; /* Define un contenedor flexbox para la sección de encriptador */
+        flex-direction: column; /* Organiza los elementos secundarios en una columna vertical */
+        align-items: center; /* Centra los elementos secundarios horizontalmente */
+        width: 100%; /* Define el ancho al 100% del contenedor padre */
+    }
+
+    .encriptador-contenedor {
+        display: flex; /* Define un contenedor flexbox para la sección de encriptador */
+        align-items: center; /* Centra los elementos secundarios verticalmente */
+        position: inherit; /* Hereda la posición del contenedor padre */
+    }
+
+    .encriptador-aviso {
+        position: inherit; /* Hereda la posición del contenedor padre */
+        margin: 15px; /* Añade un margen de 15px alrededor del contenedor */
+    }
+
+    .tarjeta {
+        width: 665px; /* Define un ancho fijo de 665px para la tarjeta */
+        height: 300px; /* Define una altura fija de 300px para la tarjeta */
+        display: flex; /* Define un contenedor flexbox para la tarjeta */
+        justify-content: center; /* Centra los elementos secundarios horizontalmente dentro de la tarjeta */
+        align-items: flex-end; /* Alinea los elementos secundarios al final del contenedor, verticalmente */
+    }
+
+    .tarjeta-contenedor {
+        display: block; /* Cambia el contenedor interno a un bloque */
+        justify-content: center; /* Intenta centrar los elementos horizontalmente (sin efecto en el modo de bloque) */
+        align-items: center; /* Intenta centrar los elementos verticalmente (sin efecto en el modo de bloque) */
+        width: 100%; /* Define el ancho al 100% del contenedor padre */
+        position: absolute; /* Posiciona el contenedor de forma absoluta dentro de su contenedor padre */
+        bottom: 20%; /* Establece la posición inferior al 20% del contenedor padre */
+        font-size: 24px; /* Establece el tamaño de la fuente en 24px */
+        font-weight: 700; /* Define el grosor de la fuente como negrita (700) */
+    }
+
+    .img-muñeco {
+        display: none; /* Oculta la imagen del muñeco en pantallas pequeñas */
+    }
+
+    .btn-copiar {
+        position: inherit; /* Hereda la posición del contenedor padre */
+        width: 100%; /* Define el ancho al 100% del contenedor padre */
+    }
+
+    .evaluar {
+        width: 100%; /* Define el ancho al 100% del contenedor padre */
+        height: 210px; /* Define una altura fija de 210px */
+        padding: 10px; /* Añade un relleno de 10px alrededor del contenido */
+    }
+}
+
+/* Media query para pantallas con un ancho máximo de 720px */
+@media(max-width: 720px) {
+    header .logo {
+        width: 100%; /* Define el ancho al 100% del contenedor padre */
+        background: var(--White); /* Establece el color de fondo utilizando la variable CSS --White */
+        padding: 2px; /* Añade un relleno de 2px alrededor del contenido */
+    }
+
+    .encriptar {
+        width: 90%; /* Define el ancho al 90% del contenedor padre */
+        font-size: 24px; /* Establece el tamaño de la fuente en 24px */
+    }
+
+    .encriptador-contenedor {
+        display: grid; /* Cambia el contenedor a un layout de grid */
+        gap: 21px; /* Añade un espacio de 21px entre los elementos de la cuadrícula */
+    }
+
+    .tarjeta {
+        width: 90%; /* Define el ancho al 90% del contenedor padre */
+    }
+
+    .copyright {
+        font-size: 20px; /* Establece el tamaño de la fuente en 20px */
+    }
+}
+
+
